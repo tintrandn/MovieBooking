@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_billboard">
+
+    <fragment
+        android:id="@+id/navigation_billboard"
+        android:name="com.example.myapplication.ui.billboard.BillBoardFragment"
+        android:label="@string/title_billboard"
+        tools:layout="@layout/fragment_billboard">
+        <action
+            android:id="@+id/action_navigation_billboard_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_navigation_billboard_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_coming_soon"
+        android:name="com.example.myapplication.ui.comingsoon.ComingSoonFragment"
+        android:label="@string/title_coming_soon"
+        tools:layout="@layout/fragment_coming_soon" />
+
+    <fragment
+        android:id="@+id/navigation_food"
+        android:name="com.example.myapplication.ui.food.FoodFragment"
+        android:label="@string/title_food"
+        tools:layout="@layout/fragment_food" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.myapplication.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myapplication.ui.login.LoginFragment"
+        android:label="LoginFragment" />
+
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.example.myapplication.ui.moviedetail.MovieDetailFragment"
+        android:label="MovieDetailFragment">
+
+        <argument
+            android:name="movieId"
+            app:argType="string" />
+
+        <argument
+            android:name="isShowing"
+            app:argType="boolean" />
+
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_movieDetailFragment_to_bookingFragment"
+            app:destination="@id/bookingFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.example.myapplication.ui.booking.BookingFragment"
+        android:label="BookingFragment">
+
+        <argument
+            android:name="movieId"
+            app:argType="string" />
+
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+
+        <argument
+            android:name="movieTitle"
+            app:argType="string" />
+
+        <argument
+            android:name="movieGenre"
+            app:argType="string" />
+
+        <argument
+            android:name="address"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_bookingFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.myapplication.ui.payment.PaymentFragment"
+        android:label="PaymentFragment">
+
+        <argument
+            android:name="price"
+            app:argType="string" />
+
+        <argument
+            android:name="movieId"
+            app:argType="string" />
+
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+
+        <argument
+            android:name="movieTitle"
+            app:argType="string" />
+
+        <argument
+            android:name="movieGenre"
+            app:argType="string" />
+
+        <argument
+            android:name="address"
+            app:argType="string" />
+
+        <argument
+            android:name="showDate"
+            app:argType="string" />
+
+        <argument
+            android:name="showTime"
+            app:argType="string" />
+
+        <argument
+            android:name="seatIndex"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_paymentFragment_to_ticketFragment"
+            app:destination="@id/ticketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticketFragment"
+        android:name="com.example.myapplication.ui.ticket.TicketFragment"
+        android:label="TicketFragment" >
+        <action
+            android:id="@+id/action_ticketFragment_to_navigation_billboard"
+            app:destination="@id/navigation_billboard" />
+    </fragment>
+</navigation>

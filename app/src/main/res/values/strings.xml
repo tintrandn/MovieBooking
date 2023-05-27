@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">BookingMovie</string>
+    <string name="title_billboard">Billboard</string>
+    <string name="title_coming_soon">Coming soon</string>
+    <string name="title_food">Food</string>
+    <string name="title_profile">Profile</string>
+    <string name="key_search">Key Search</string>
+    <string name="login">Đăng Nhập</string>
+    <string name="register">Đăng Kí</string>
+    <string name="login_name">Tên Đăng Nhập</string>
+    <string name="password">Mật Khẩu</string>
+    <string name="confirm_password">Nhập Lại Mật Khẩu</string>
+    <string name="remember_password">Ghi nhớ mật khẩu</string>
+    <string name="forget_password">Quên mật khẩu</string>
+    <string name="register_term">Tôi đồng ý với điều khoản và đang mua vé cho người có độ tuổi thích hợp.</string>
+    <string name="booking">Đặt vé</string>
+    <string name="action">Action</string>
+    <string name="thriller">Thriller</string>
+    <string name="animation">Animation</string>
+    <string name="releaseDay">Sắp khởi chiếu</string>
+    <string name="inputData">Bạn hãy nhập username và password!</string>
+    <string name="login_success">Login Success</string>
+    <string name="login_fail">Đăng nhập thất bại. Bạn hãy kiểm tra lại username và password!</string>
+    <string name="inputDataRegister">Bạn hãy kiểm tra lại thông tin cần nhập!</string>
+    <string name="register_success">Đăng ký thành công. Bạn hãy login bằng tài khoản mới!</string>
+    <string name="selecting">Đang chọn</string>
+    <string name="booked">Đã đặt</string>
+    <string name="empty">Trống</string>
+    <string name="screen">Màn hình</string>
+    <string name="pick_date">Chọn ngày</string>
+    <string name="pick_time">Chọn giờ</string>
+    <string name="time1">8:00 pm</string>
+    <string name="time2">8:45 pm</string>
+    <string name="time3">10:00 pm</string>
+    <string name="payment">Thanh Toán</string>
+    <string name="paymentBy">Phương thức thanh toán</string>
+    <string name="counter">Tại quầy</string>
+    <string name="bank">Thẻ ngân hàng</string>
+    <string name="momo">Ví Momo</string>
+    <string name="price">$%s     |     Pay</string>
+    <string name="ticket">Vé của tôi</string>
+
+</resources>

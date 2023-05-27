@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/black">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.AppCompat.Display1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/backButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/backButton" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/movieImage"
+            android:layout_width="135dp"
+            android:layout_height="192dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="45dp"
+            android:background="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backButton" />
+
+        <TextView
+            android:id="@+id/movieName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/movieName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/movieImage"
+            app:layout_constraintTop_toTopOf="@id/movieImage"
+            tools:text="Avengers: Endgame" />
+
+        <TextView
+            android:id="@+id/movieGenres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/movieName"
+            app:layout_constraintTop_toBottomOf="@id/movieName"
+            tools:text="Action, Sci-fi, Fantasy" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/map_pin"
+            app:layout_constraintBottom_toBottomOf="@+id/movieImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/movieName"
+            app:layout_constraintTop_toBottomOf="@id/movieGenres"
+            tools:text="Medellín, Colombia" />
+
+        <TextView
+            android:id="@+id/paymentText"
+            style="@style/TextAppearance.AppCompat.Display1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/paymentBy"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieImage" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:drawablePadding="50dp"
+            android:gravity="center_vertical"
+            android:text="@string/counter"
+            android:textColor="@color/gray"
+            android:textSize="22sp"
+            app:drawableStartCompat="@drawable/counter"
+            app:layout_constraintEnd_toEndOf="@id/paymentText"
+            app:layout_constraintStart_toStartOf="@id/paymentText"
+            app:layout_constraintTop_toBottomOf="@id/paymentText" />
+
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/counter"
+            app:layout_constraintEnd_toEndOf="@id/line1"
+            app:layout_constraintTop_toTopOf="@id/counter" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/line1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/line_4"
+            app:layout_constraintEnd_toEndOf="@id/paymentText"
+            app:layout_constraintStart_toStartOf="@id/counter"
+            app:layout_constraintTop_toBottomOf="@id/counter" />
+
+        <TextView
+            android:id="@+id/bank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:drawablePadding="50dp"
+            android:gravity="center_vertical"
+            android:text="@string/bank"
+            android:textColor="@color/gray"
+            android:textSize="22sp"
+            app:drawableStartCompat="@drawable/bank"
+            app:layout_constraintEnd_toEndOf="@id/paymentText"
+            app:layout_constraintStart_toStartOf="@id/paymentText"
+            app:layout_constraintTop_toBottomOf="@id/line1" />
+
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/bank"
+            app:layout_constraintEnd_toEndOf="@id/line2"
+            app:layout_constraintTop_toTopOf="@id/bank" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/line2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/line_4"
+            app:layout_constraintEnd_toEndOf="@id/paymentText"
+            app:layout_constraintStart_toStartOf="@id/counter"
+            app:layout_constraintTop_toBottomOf="@id/bank" />
+
+        <TextView
+            android:id="@+id/momo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:drawablePadding="50dp"
+            android:gravity="center_vertical"
+            android:text="@string/momo"
+            android:textColor="@color/gray"
+            android:textSize="22sp"
+            app:drawableStartCompat="@drawable/counter"
+            app:layout_constraintEnd_toEndOf="@id/paymentText"
+            app:layout_constraintStart_toStartOf="@id/paymentText"
+            app:layout_constraintTop_toBottomOf="@id/line2" />
+
+        <CheckBox
+            android:id="@+id/checkbox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/momo"
+            app:layout_constraintEnd_toEndOf="@id/line2"
+            app:layout_constraintTop_toTopOf="@id/momo" />
+
+        <TextView
+            android:id="@+id/paymentButton"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="225dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/payment_button"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/momo"
+            tools:text="$29.1    |    Pay" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
